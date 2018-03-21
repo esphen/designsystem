@@ -1,33 +1,30 @@
 .ffe-system-message-wrapper {
+    color: @ffe-black;
+    fill: currentColor;
     transition: height @ffe-transition-duration @ffe-ease-in-out-back;
     overflow: hidden;
 
     &--error {
         background-color: @ffe-orange-salmon;
-        fill: @ffe-black;
     }
 
     &--info {
         background-color: @ffe-blue-pale;
-        fill: @ffe-black;
     }
 
     &--news {
         color: @ffe-white;
         background-color: @ffe-black;
-        fill: @ffe-white;
     }
 
     &--success {
         background-color: @ffe-green-mint;
-        fill: @ffe-black;
     }
 }
 
 .ffe-system-message {
     position: relative;
-    margin: 0 auto;
-    padding: 10px 20px;
+    padding: 10px 0;
     text-align: left;
 
     &__icon {
@@ -66,13 +63,20 @@
     }
 
     &__close {
+        appearance: none;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        color: inherit;
+        cursor: pointer;
         display: inline-block;
-        vertical-align: middle;
+        height: 14px;
+        margin: 0;
+        padding: 0;
         position: absolute;
         right: 20px;
         top: 13px;
-        cursor: pointer;
-        height: 14px;
+        vertical-align: middle;
         width: 14px;
 
         > svg {
